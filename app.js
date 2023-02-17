@@ -4,7 +4,6 @@ class Calculator {
       this.currentOperandTextElement = currentOperandTextElement
       this.clear()
       this.keyboardInput()
-      // this.limit()
     }
   
     keyboardInput() {
@@ -68,13 +67,6 @@ class Calculator {
     }
       this.currentOperand = this.currentOperand.toString() + number.toString()
     }
-
-    limit(number){
-        let maxDigits = 16
-    if(this.currentOperand.length >= maxDigits) { // check if the number of digits exceeds the limit
-          return;
-        }
-    }
   
     chooseOperation(operation) {
       if (this.currentOperand === '') {
@@ -137,6 +129,7 @@ class Calculator {
       } else {
         return integerDisplay
       }
+
     }
   
     updateDisplay() {
@@ -149,6 +142,10 @@ class Calculator {
         this.previousOperandTextElement.innerText = ''
       }
     }
+
+    limitCharacter(id, length){
+      this.currentOperandTextElement.innerHTML(substr(0, 10))
+    }
   }
     
   const numberButtons = document.querySelectorAll('[number]')
@@ -159,9 +156,8 @@ class Calculator {
   const previousOperandTextElement = document.querySelector('[previous-operand]')
   const currentOperandTextElement = document.querySelector('[current-operand]')
   const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
-  
-  
-  numberButtons.forEach(button => {
+
+    numberButtons.forEach(button => {
     button.addEventListener('click', () => {
       calculator.appendNumber(button.innerText)
       calculator.updateDisplay()
@@ -189,3 +185,4 @@ class Calculator {
     calculator.delete()
     calculator.updateDisplay()
   })
+ 
