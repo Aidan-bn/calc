@@ -4,7 +4,7 @@ class Calculator {
       this.currentOperandTextElement = currentOperandTextElement
       this.clear()
       this.keyboardInput()
-      this.limit()
+      // this.limit()
     }
   
     keyboardInput() {
