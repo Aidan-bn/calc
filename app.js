@@ -20,7 +20,7 @@ class Calculator {
             case '7':
             case '8':
             case '9':
-              this.addNumber(e.key)
+              this.appendNumber(e.key)
               this.updateDisplay()
               break
             case '.':
@@ -46,6 +46,7 @@ class Calculator {
               this.delete()
               this.updateDisplay()
               break
+            default:
           }
         })
       }
