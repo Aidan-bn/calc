@@ -4,7 +4,7 @@ class Calculator {
       this.currentOperandTextElement = currentOperandTextElement
       this.clear()
       this.keyboardInput()
-      this.limit()
+      // this.limit()
     }
   
     keyboardInput() {
@@ -20,11 +20,11 @@ class Calculator {
             case '7':
             case '8':
             case '9':
-              this.addNumber(e.key)
+              this.appendNumber(e.key)
               this.updateDisplay()
               break
             case '.':
-              this.addNumber('.')
+              this.appendNumber('.')
               this.updateDisplay()
               break
             case '+':
@@ -32,6 +32,7 @@ class Calculator {
             case '*':
             case '/':
               this.operationChoose(e.key)
+              // this.operation(e.key)
               this.updateDisplay()
               break
             case 'Escape':
@@ -46,6 +47,7 @@ class Calculator {
               this.delete()
               this.updateDisplay()
               break
+            default:
           }
         })
       }
