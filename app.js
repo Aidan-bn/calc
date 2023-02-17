@@ -36,15 +36,15 @@ class Calculator {
               this.updateDisplay()
               break
             case 'Escape':
-              this.clear()
+              this.clear(e.key)
               this.updateDisplay()
               break
             case 'Enter':
-              this.compute()
+              this.compute(e.key)
               this.updateDisplay()
               break
             case 'Backspace':
-              this.delete()
+              this.delete(e.key)
               this.updateDisplay()
               break
             default:
