@@ -115,6 +115,7 @@ class Calculator {
         default:
           return
       }
+      computation = parseFloat(computation).toFixed(4)
       this.currentOperand = computation
       this.operation = undefined
       this.previousOperand = ''
