@@ -24,7 +24,7 @@ class Calculator {
               this.updateDisplay()
               break
             case '.':
-              this.addNumber('.')
+              this.appendNumber('.')
               this.updateDisplay()
               break
             case '+':
@@ -32,6 +32,7 @@ class Calculator {
             case '*':
             case '/':
               this.operationChoose(e.key)
+              // this.operation(e.key)
               this.updateDisplay()
               break
             case 'Escape':
